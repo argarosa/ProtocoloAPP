@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - TesteProtocolo</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">TesteProtocolo</a>
+            <ul class="nav-links">
+                <li><a href="/Clientes">Clientes</a></li>
+                <li><a href="/Protocolos">Protocolos</a></li>
+                <li><a href="/StatusProtocolo">Status</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; 2025 TesteProtocolo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

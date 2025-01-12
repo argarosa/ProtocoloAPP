@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProtocoloApp.Models.StatusProtocolo>
+
+@{
+    ViewData["Title"] = "Status de Protocolo";
+}
+
+<h1>Status de Protocolo</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar Novo Status de Protocolo</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var status in Model)
+        {
+            <tr>
+                <td>@status.IdStatus</td>
+                <td>@status.NomeStatus</td>
+                <td>@status.Descricao</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@status.IdStatus" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@status.IdStatus" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

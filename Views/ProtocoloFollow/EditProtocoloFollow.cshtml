@@ -1,0 +1,14 @@
+﻿@model ProtocoloApp.Models.ProtocoloFollow
+
+<h1>Editar Protocolo Follow</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="IdFollow" />
+    <div class="form-group">
+        <label asp-for="ProtocoloId" class="control-label"></label>
+        <select asp-for="ProtocoloId" class="form-control" asp-items="ViewBag.Protocolos"></select>
+        <span asp-validation-for="ProtocoloId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

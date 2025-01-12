@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProtocoloApp.Models.ProtocoloFollow>
+
+<h1>Protocolo Follows</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar Novo Protocolo Follow</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Protocolo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdFollow</td>
+                <td>@item.Protocolo.Titulo</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdFollow" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdFollow" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

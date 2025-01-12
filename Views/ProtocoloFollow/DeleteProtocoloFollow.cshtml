@@ -1,0 +1,20 @@
+﻿@model ProtocoloApp.Models.ProtocoloFollow
+
+<h1>Excluir Protocolo Follow</h1>
+
+<div>
+    <h4>Protocolo Follow</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.IdFollow</dd>
+        <dt class="col-sm-2">Protocolo</dt>
+        <dd class="col-sm-10">@Model.Protocolo.Titulo</dd>
+    </dl>
+    <form asp-action="DeleteConfirmed">
+        <input type="hidden" asp-for="IdFollow" />
+        <p>Tem certeza de que deseja excluir este item?</p>
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
